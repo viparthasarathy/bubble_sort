@@ -5,10 +5,10 @@ def bubble_sort(array)
 		second_element = 1
 		while first_element < array.length - num_trials
 			if array[first_element] > array[second_element]
-				swap_indexes!(first_element,second_element)
+				array.insert(first_element, array.delete_at(second_element))
 			end
-			i += 1
-			j += 1
+			first_element += 1
+			second_element += 1
 		end
 		num_trials += 1
 	end
